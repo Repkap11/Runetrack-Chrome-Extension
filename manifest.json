@@ -2,28 +2,14 @@
   "manifest_version": 2,
     "version": "1.0",
   "name": "HighRes Runetrack Logo",
-  "icons": { "512": "pure_ess_512.png" },
-  "permissions": ["webRequest","webRequestBlocking","*://*.runetrack.com/","*://*.google.com/"],
-  "web_accessible_resources" : ["forum_banner.jpg","site_banner_text.png"],
+  "icons": { "512": "images/pure_ess_512.png" },
+  "permissions": ["webRequest","webRequestBlocking","*://*.runetrack.com/imagee","*://*.runetrack.com/forum/image"],
+  "web_accessible_resources" : ["images/forum_banner.jpg","images/site_banner_text.png"],
   "description": "Replace the Runetrack logo with a higher resoultion version.",
-  "content_scripts": [
-    {   
-        "matches": ["*://runetrack.com/*"], 
-        "exclude_matches": ["*://runetrack.com/forums/*"], 
-        "js": [ "runetrack_start.js" ],
-        "run_at": "document_start",
-        "all_frames" : false
-    },
-    {   
-       "matches": ["*://runetrack.com/*"],
-       "exclude_matches": ["*://runetrack.com/forums/*"], 
-        "js": [ "runetrack_end.js" ],
-        "run_at": "document_end"
-    },
-    {   
-       "matches": ["*://runetrack.com/forums/*"], 
-        "js": [ "runetrack_forums_end.js" ],
-        "run_at": "document_end"
-    }
-	]
+  
+  "background": {
+		"scripts": ["background.js"]
+	}
+		
+	
 }
