@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
-    "version": "1.0",
+  "version": "1.0",
   "name": "HighRes Runetrack Logo",
   "icons": { "512": "images/pure_ess_512.png" },
-  "permissions": ["webRequest","webRequestBlocking","*://*.runetrack.com/imagee","*://*.runetrack.com/forum/image"],
-  "web_accessible_resources" : ["images/forum_banner.jpg","images/site_banner_text.png"],
+  "permissions": ["webRequest","webRequestBlocking","*://*.runetrack.com/images/*","*://*.runetrack.com/forums/images/*"],
+  "web_accessible_resources" : ["images/*"],
   "description": "Replace the Runetrack logo with a higher resoultion version.",
   
   "background": {
